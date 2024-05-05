@@ -82,3 +82,31 @@ Acontinuación veremos algunos ejemplos de instalación y configuración.
 
 ### FileBrowser
 
+FileBrowser es una explorador de archivos que incluye funciones para compartir archivos que terceros de forma temporal. Para instalarlo simplemente lo buscamos en la *App Store* y pulsamos la opción de instalar.
+
+>El usuario por defecto es : ***admin*** y la contraseña: ***admin***, con lo que es recomendable cambiarlo una vez que hayas iniciado sesion por primera vez.
+
+Si FileBrowser no detecta los discos conectados por usb o algún disco duro extra que este instalado en Servidor tendremos que hacer la siguiente configuración, esto lo tendremos que hacer para todas las aplicaciones que queramos que tengan acceso a estos discos duros extras.
+
+### Añadir discos extra :
+
+Con la aplicación ya instalada nos vamos a la ventana de inicio, buscamos el icono de la aplicación y pulsamos en los tres puntitos que aparecen al poner el cursor sobre el icono y clicamos en la opción de ajustes. Aparecerá la siguiente ventana :
+
+![Configuración FIleBrowser](/Imagenes/FileBrowser_conf.png)
+
+1. En la seccion de sección de volumenes pulsamos en *Añadir*
+2. En el apartado de anfitrión tenemos que poner la ruta donde está montado el usb/disco extra, para que esto sea más fácil se pude pulsar en el icono cuadrado de la caja de texto y navegar por el explorador de archivos hasta encontrar el disco que queremos añadir.
+3. En el apartado de Contendedor tenemos que poner lo siguiente :
+    >/srv/Destino
+    
+    Donde **Destino** es el nombre que tendra la carpeta donde estará montado el usb/disco extra dentro de la aplicación. (En el ejemplo se llamará usbs).
+4. Pulsamos en Guardar.
+
+Ahora al abrir la aplición nos debería aparacer una carpeta con el nombre **Destino** (**usbs** en el ejemplo).
+
+![usbs montado](/Imagenes/File_USB.png)
+
+Tal y como tenemos configurado el Servidor ahora podriamos acceder a él solo si estamos conectados a la misma red y compartir nuestros archivos con terceros que tambien esten conectados a la misma red. Para poder acceder a nuestro servidor desde el exterior tendremos dar unos pasos más, primero insatalaremos un Proxy dentro del Servidor para que evitar exponer demasiados puertos de nuestra red local.
+
+### Nginx Proxy Manager
+
