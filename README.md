@@ -5,7 +5,7 @@
 * Discos duros.
 * Un segundo dispositivo (o una panatalla, teclado y ratón conectados al dispositivo del servidor).
 
->:memo: Al MiniPC/raspberry lo llamaremos Servidor y al segundo dispositivo lo llamaremos Auxiliar.
+>:memo: **Nota:** Al MiniPC/raspberry lo llamaremos Servidor y al segundo dispositivo lo llamaremos Auxiliar.
 
 # CasaOS
 CasaOs es una especie de sistema operativo en la nube, código abierto, que se basa en la tecnología Docker para ofrecer una experiencia similar a la de un SO convencional pero que se accede a traves de un navegador web. Esto nos será muy útil ya que facilita mucho la gestión de contenedores, que usaremos más adelante, además de la gestión de archivos en remoto. Ya que ofrece una interfaz bastante sencilla de entender y utilizar.
