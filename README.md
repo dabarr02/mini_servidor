@@ -57,6 +57,9 @@ Con la conexión establecida introducimos el siguiente comando :
 Cuando termine las instalación nos saldrá algo parecido a esto:
 
 ![Instalación CasaOS](/Imagenes/Casaos_install.png)
+
+*Fuente:*  https://www.instructables.com/Casa-OS-With-Raspberry-Pi/
+
 Donde nos dice la dirección Ip del Servidor (debería ser la misma que apuntamos) desde la que podemos acceder desde un navegador.
 
 En el caso de que queramos desinstalar CasaOS podemos introducir el siguiente comando :
@@ -68,6 +71,9 @@ En el caso de que queramos desinstalar CasaOS podemos introducir el siguiente co
 Al acceder a la dirección Ip del Servidor por primera vez nos aparecerá la siguiente ventana :
 
 ![Welcome Casaos](/Imagenes/casaos_welcome.png)
+
+
+*Fuente:* https://www.instructables.com/Casa-OS-With-Raspberry-Pi/
 
 Aquí tendremos que elegir un nombre de usuario y una contraseña para acceder a nuestro Servidor desde CasaOS, este usuario y contraseña pueden (y deben) ser diferentes del usuario y contraseña de inicio de sesión de *habitual* del Servidor. Con este sencillo paso ya tenemos CasaOS listo para usarse.
 
