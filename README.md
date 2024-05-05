@@ -8,7 +8,7 @@
 >:memo: **Nota:** Al MiniPC/raspberry lo llamaremos **Servidor** y al segundo dispositivo lo llamaremos **Auxiliar**.
 
 ## CasaOS
-CasaOs es una especie de sistema operativo en la nube, código abierto, que se basa en la tecnología Docker para ofrecer una experiencia similar a la de un SO convencional pero que se accede a traves de un navegador web. Esto nos será muy útil ya que facilita mucho la gestión de contenedores, que usaremos más adelante, además de la gestión de archivos en remoto, ya que ofrece una interfáz bastante sencilla de entender y utilizar.
+CasaOs es una especie de sistema operativo en la nube, código abierto, que se basa en la tecnología Docker para ofrecer una experiencia similar a la de un SO convencional pero que se accede a traves de un navegador web. Esto nos será muy útil ya que facilita mucho la gestión de contenedores, que usaremos más adelante, además de la gestión de archivos en remoto, ya que ofrece una interfaz bastante sencilla de entender y utilizar.
 Desde su página oficial se pude probar una versión Demo : [casaos.io](https://casaos.io)
 
 ## Instalación de CasaOS
@@ -73,7 +73,7 @@ Aquí tendremos que elegir un nombre de usuario y una contraseña para acceder a
 
 ## Instalar *aplicaciones*
 
-En CasaOS el equivalente de las aplicaciones son los contenedores. Para instalar las aplicaciones predeterminadas solo tenemos que pulsa en el icono que pone *App Store* y se nose desplegara la siguiente ventana :
+En CasaOS el equivalente de las aplicaciones son los contenedores. Para instalar las aplicaciones predeterminadas solo tenemos que pulsa en el icono que pone *App Store* y se nos desplegara la siguiente ventana :
 
 ![Tienda de aplicaciones](/Imagenes/AppStore_CasaOS.png)
 
@@ -110,3 +110,23 @@ Tal y como tenemos configurado el Servidor ahora podriamos acceder a él solo si
 
 ### Nginx Proxy Manager
 
+La razón principal para insatlar un Proxy en nuestro servidor es para evitar abrir puertos en nuestro router pero tambien nos servirá para no tener que recordar en que puerto hemos "alojado" cada aplicación. Ya que todas, o casi todas, las conexiones que hagamos a nuestro servidor desde una red externa lo haremos a traves del puerto 80 (para http) o el 443 (para https), lo que vamos a cambiar para acceder a una aplicación u otra es el dominio de acceso.
+
+![proxy explain](/Imagenes/ReverseProxy.jpg)
+
+*Fuente:* https://www.wundertech.net/nginx-proxy-manager-raspberry-pi-install-instructions/
+
+En la fuente de la imagen hay un ejemplo de instalación de Nginx Proxy Manager, sin embargo con CasaOS la instalación es, a mi juicio, más sencilla.
+
+Antes de instalarlo debemos cambiar el puerto de acceso a la interfaz de CasaOS, para ello solo hay que pulsar en Ajustes desde la pantalla de inicio (segundo icono de arriba a la izquierda), donde poner **Puerto de la WebUI** pulsar en modificar y poner el nuevo puerto (por ejemplo: 5000) evitando los puertos 80, 81, 443 o cualquiera que hayamos usado en otras aplicaciones.
+> :memo: Para saber que puertos usan otras aplicaciones tienes que ir a los ajustes de cada aplicación y en la sección de **Puerto** mirar cuales estan en uso dentro del apartado **Anfitrión**
+
+Ahora cuando queramos acceder a la interfaz de CasaOS tendremos que poner lo siguiente en el navegador:
+    
+> IP_SERVIDOR:PUERTO_ELEJIDO 
+
+Siguiendo con el ejemplo:
+
+> 192.168.0.102:5000
+
+Ahora podemos instalar la aplicaión, solo hay que buscarla en la App Store y pulsar en instalar.
