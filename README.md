@@ -29,5 +29,6 @@ Para ello utilizamos una herramienta como [Advanced IP Scanner](https://www.adva
 Una vez instalado en Auxiliar y estando conectados en la misma red que el Servidor buscamos la IP de este y la guardamos.
 
 ![Ejempl IP Scanner](/Imagenes/Ip_Scanner.png "Ejemplo IP Scanner")
+
 *Ejemplo Advanced IP Scanner*
 
