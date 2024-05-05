@@ -94,7 +94,7 @@ FileBrowser es una explorador de archivos que incluye funciones para compartir a
 
 Si FileBrowser no detecta los discos conectados por usb o algún disco duro extra que este instalado en Servidor tendremos que hacer la siguiente configuración, esto lo tendremos que hacer para todas las aplicaciones que queramos que tengan acceso a estos discos duros extras.
 
-### Añadir discos extra :
+### Añadir discos extra
 
 Con la aplicación ya instalada nos vamos a la ventana de inicio, buscamos el icono de la aplicación y pulsamos en los tres puntitos que aparecen al poner el cursor sobre el icono y clicamos en la opción de ajustes. Aparecerá la siguiente ventana :
 
