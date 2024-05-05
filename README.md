@@ -7,14 +7,14 @@
 
 >:memo: **Nota:** Al MiniPC/raspberry lo llamaremos **Servidor** y al segundo dispositivo lo llamaremos **Auxiliar**.
 
-# CasaOS
+## CasaOS
 CasaOs es una especie de sistema operativo en la nube, código abierto, que se basa en la tecnología Docker para ofrecer una experiencia similar a la de un SO convencional pero que se accede a traves de un navegador web. Esto nos será muy útil ya que facilita mucho la gestión de contenedores, que usaremos más adelante, además de la gestión de archivos en remoto, ya que ofrece una interfáz bastante sencilla de entender y utilizar.
 Desde su página oficial se pude probar una versión Demo : [casaos.io](https://casaos.io)
 
 ## Instalación de CasaOS
 Tenemos dos formas de instalar CasaOS.
 
-## Desde el Servidor
+### Desde el Servidor
 En este caso lo único que tenemos que hacer es :
 
 1. Abrir la terminal (en el caso que hallamos instalado una versión con escritorio)
@@ -22,7 +22,7 @@ En este caso lo único que tenemos que hacer es :
 
         curl -fsSL https://get.casaos.io | sudo bash
 
-## Desde el Auxiliar (SSH)
+### Desde el Auxiliar (SSH)
 Para este caso es necesario que conozcamos la dirección IP de nuestro Servidor.
 ### Buscar dirección IP
 Para ello utilizamos una herramienta como [Advanced IP Scanner](https://www.advanced-ip-scanner.com/es/), aunque se puede utilizar cualquier herramienta de este estilo.
@@ -56,10 +56,29 @@ Con la conexión establecida introducimos el siguiente comando :
 
 Cuando termine las instalación nos saldrá algo parecido a esto:
 
-![INstalación CasaOS](/Imagenes/Casaos_install.png)
+![Instalación CasaOS](/Imagenes/Casaos_install.png)
 Donde nos dice la dirección Ip del Servidor (debería ser la misma que apuntamos) desde la que podemos acceder desde un navegador.
 
 En el caso de que queramos desinstalar CasaOS podemos introducir el siguiente comando :
 
     casaos-uninstall
+
+## Configurar CasaOS
+
+Al acceder a la dirección Ip del Servidor por primera vez nos aparecerá la siguiente ventana :
+
+![Welcome Casaos](/Imagenes/casaos_welcome.png)
+
+Aquí tendremos que elegir un nombre de usuario y una contraseña para acceder a nuestro Servidor desde CasaOS, este usuario y contraseña pueden (y deben) ser diferentes del usuario y contraseña de inicio de sesión de *habitual* del Servidor. Con este sencillo paso ya tenemos CasaOS listo para usarse.
+
+## Instalar *aplicaciones*
+
+En CasaOS el equivalente de las aplicaciones son los contenedores. Para instalar las aplicaciones predeterminadas solo tenemos que pulsa en el icono que pone *App Store* y se nose desplegara la siguiente ventana :
+
+![Tienda de aplicaciones](/Imagenes/AppStore_CasaOS.png)
+
+Desde la que podemos buscar e instalar algunas aplicaciones "pre-configuradas".
+Acontinuación veremos algunos ejemplos de instalación y configuración.
+
+### FileBrowser
 
