@@ -57,7 +57,7 @@ Con la conexión establecida introducimos el siguiente comando :
 Una vez instalado nos saldrá algo parecido a esto:
 
 ![INstalación CasaOS](/Imagenes/Casaos_install.png)
-Donde nos dice que la dirección Ip del Servidor (debería ser la misma que apuntamos) desde la que podemos acceder desde un navegador.
+Donde nos dice la dirección Ip del Servidor (debería ser la misma que apuntamos) desde la que podemos acceder desde un navegador.
 
 En el caso de que queramos desinstalar CasaOS podemos introducir el siguiente comando :
 
