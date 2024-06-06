@@ -136,3 +136,13 @@ Siguiendo con el ejemplo:
 > 192.168.0.102:5000
 
 Ahora podemos instalar la aplicaión, solo hay que buscarla en la App Store y pulsar en instalar.
+
+Para esta aplicación tenemos que tener libres de uso el puerto 80 (http) y el 443 (https) el puerto 81 que se muestra en el menú de ajustes de la aplicación es para acceder a la configuración del proxy y podemos cambiar el puerto de Anfitrión al que queramos, cambiando tambien el puerto que aparece en Web UI.
+
+Una vez instalado nos pedira un correo electronico y una contraseña para acceder a la configuración.
+ > :memo: El correo no tiene porque ser uno real, pero conviene recordarlo.
+
+### Como usar Nginx Proxy Manager
+Para sacar el máximo partido a esta aplicación es recomendable tener comprado un dominio, en esta guía vamos a usar uno comprado en CloudFlare.
+ > :memo: Para los ejemplos nuestro dominio contratado será ejemplo.com
+ 
