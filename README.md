@@ -143,6 +143,8 @@ Una vez instalado nos pedira un correo electronico y una contraseña para accede
  > :memo: El correo no tiene porque ser uno real, pero conviene recordarlo.
 
 ### Como usar Nginx Proxy Manager
-Para sacar el máximo partido a esta aplicación es recomendable tener comprado un dominio, en esta guía vamos a usar uno comprado en CloudFlare.
+Para sacar el máximo partido a esta aplicación es recomendable tener comprado un dominio, en esta guía vamos a usar uno comprado en CloudFlare. No hace falta comprarlo ahí pero sí se necesita un proveedor que te permita crear subdominios.
  > :memo: Para los ejemplos nuestro dominio contratado será ejemplo.com
- 
+
+
+Otro aspecto a tener en cuenta es que el acceso desde fuera de red la local (donde tengas conectado tu servidor) solo será posible si tu proveedor de internet (ISP) te asigna una IP propia, no importa que sea dinámica, en vez de hacerte CGNAT. Si tienes la mala suerte de que te están haciendo NAT puedes probar a llamar a tu proveedor y pedir que te lo quiten, si no funciona hay opciones para solucionar este problema. La mejor solución es no usar ipv4 y usar ipv6, siempre que tu proveedor te asigne una. Si tienes NAT y no tienes ipv6 pudes probar a usar esta [solución](https://www.youtube.com/watch?v=2fA6u9eahNw).
