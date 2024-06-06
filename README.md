@@ -3,7 +3,7 @@
 ## Material
 * MiniPc, raspberry pi o similares con ubuntu/debian instalado.
 * Discos duros.
-* Un segundo dispositivo (o una panatalla, teclado y ratón conectados al dispositivo del servidor).
+* Un segundo dispositivo (o una pantalla, teclado y ratón conectados al dispositivo del servidor).
 
 >:memo: **Nota:** Al MiniPC/raspberry lo llamaremos **Servidor** y al segundo dispositivo lo llamaremos **Auxiliar**.
 
