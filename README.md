@@ -1,17 +1,24 @@
 # Como crear un mini servidor en casa
-
-## Material
+# Índice
+1. [Material](#Material)
+2. [CasaOS](#casaos)
+   - [Instalación de CasaOS](#casaosInstall)
+   - [Configurar CasaOS](#casaosConfig)
+3. [Instalar aplicaciones](#apssInstall)
+   - [File Browser](#fileBrowser)
+   - [Nginx Proxy Manager](#proxyManager)
+## Material <a name="Material" a></a>
 * MiniPc, raspberry pi o similares con ubuntu/debian instalado.
 * Discos duros.
 * Un segundo dispositivo (o una pantalla, teclado y ratón conectados al dispositivo del servidor).
 
 >:memo: **Nota:** Al MiniPC/raspberry lo llamaremos **Servidor** y al segundo dispositivo lo llamaremos **Auxiliar**.
 
-## CasaOS
+## CasaOS<a name="casaos" a></a>
 CasaOs es una especie de sistema operativo en la nube, código abierto, que se basa en la tecnología Docker para ofrecer una experiencia similar a la de un SO convencional pero que se accede a traves de un navegador web. Esto nos será muy útil ya que facilita mucho la gestión de contenedores, que usaremos más adelante, además de la gestión de archivos en remoto, ya que ofrece una interfaz bastante sencilla de entender y utilizar.
 Desde su página oficial se pude probar una versión Demo : [casaos.io](https://casaos.io)
 
-## Instalación de CasaOS
+## Instalación de CasaOS<a name="casaosInstall" a></a>
 Tenemos dos formas de instalar CasaOS.
 
 ### Desde el Servidor
@@ -19,8 +26,9 @@ En este caso lo único que tenemos que hacer es :
 
 1. Abrir la terminal (en el caso que hallamos instalado una versión con escritorio)
 2. Introducir el siguiente comando:
-
-        curl -fsSL https://get.casaos.io | sudo bash
+```sh
+curl -fsSL https://get.casaos.io | sudo bash
+```
 
 ### Desde el Auxiliar (SSH)
 Para este caso es necesario que conozcamos la dirección IP de nuestro Servidor.
@@ -36,23 +44,28 @@ Ahora que tenemos la dirección IP tenemos que conectarnos al Servidor de manera
 
 1. Abrir una ventana de terminal en Auxiliar.
 2. Introducimos el siguiente comando:
+   
+```sh
+ssh usuario@IP.Servidor
+```
 
-        ssh usuario@IP.Servidor
-    Donde :
-    
-    * usuario: Es el usuario que usamos en Servidor
-    * IP.Servidor: Es la dirección IP del servidor que hemos apuntado antes.
+Donde :
 
-    Ejemplo (con usuario : Prueba e IP : 192.168.0.102):
-            
-            ssh Prueba@192.168.0.102
+* usuario: Es el usuario que usamos en Servidor
+* IP.Servidor: Es la dirección IP del servidor que hemos apuntado antes.
+
+Ejemplo (con usuario : Prueba e IP : 192.168.0.102):
+```sh
+ssh Prueba@192.168.0.102
+```
 3. Introducimos la contraseña del usuario (*Prueba*, en el ejemplo) del Servidor.
 
 Establecida la conexión, lo que tenemos en nuestra terminal es una sesión remota del Servidor y todos los comandos que escribamos aquí es como si los estuviesemos escribiendo en una terminal del propio Servidor.
 
 Con la conexión establecida introducimos el siguiente comando :
-
-    curl -fsSL https://get.casaos.io | sudo bash
+```sh
+ curl -fsSL https://get.casaos.io | sudo bash
+```
 
 Cuando termine las instalación nos saldrá algo parecido a esto:
 
@@ -63,10 +76,10 @@ Cuando termine las instalación nos saldrá algo parecido a esto:
 Donde nos dice la dirección Ip del Servidor (debería ser la misma que apuntamos) desde la que podemos acceder desde un navegador.
 
 En el caso de que queramos desinstalar CasaOS podemos introducir el siguiente comando :
-
-    casaos-uninstall
-
-## Configurar CasaOS
+``` sh
+casaos-uninstall
+```
+## Configurar CasaOS <a name="casaosConfig" a></a>
 
 Al acceder a la dirección Ip del Servidor por primera vez nos aparecerá la siguiente ventana :
 
@@ -77,7 +90,7 @@ Al acceder a la dirección Ip del Servidor por primera vez nos aparecerá la sig
 
 Aquí tendremos que elegir un nombre de usuario y una contraseña para acceder a nuestro Servidor desde CasaOS, este usuario y contraseña pueden (y deben) ser diferentes del usuario y contraseña de inicio de sesión de *habitual* del Servidor. Con este sencillo paso ya tenemos CasaOS listo para usarse.
 
-## Instalar *aplicaciones*
+## Instalar *aplicaciones*<a name="apssInstall" a></a>
 
 En CasaOS el equivalente de las aplicaciones son los contenedores. Para instalar las aplicaciones predeterminadas solo tenemos que pulsa en el icono que pone *App Store* y se nos desplegara la siguiente ventana :
 
@@ -86,7 +99,7 @@ En CasaOS el equivalente de las aplicaciones son los contenedores. Para instalar
 Desde la que podemos buscar e instalar algunas aplicaciones "pre-configuradas".
 Acontinuación veremos algunos ejemplos de instalación y configuración.
 
-### FileBrowser
+### FileBrowser <a name="fileBrowser" a></a>
 
 FileBrowser es una explorador de archivos que incluye funciones para compartir archivos que terceros de forma temporal. Para instalarlo simplemente lo buscamos en la *App Store* y pulsamos la opción de instalar.
 
@@ -114,7 +127,7 @@ Ahora al abrir la aplición nos debería aparacer una carpeta con el nombre **De
 
 Tal y como tenemos configurado el Servidor ahora podriamos acceder a él solo si estamos conectados a la misma red y compartir nuestros archivos con terceros que tambien esten conectados a la misma red. Para poder acceder a nuestro servidor desde el exterior tendremos dar unos pasos más, primero insatalaremos un Proxy dentro del Servidor para que evitar exponer demasiados puertos de nuestra red local.
 
-### Nginx Proxy Manager
+### Nginx Proxy Manager <a name="proxyManager" a></a>
 
 La razón principal para insatlar un Proxy en nuestro servidor es para evitar abrir puertos en nuestro router pero tambien nos servirá para no tener que recordar en que puerto hemos "alojado" cada aplicación. Ya que todas, o casi todas, las conexiones que hagamos a nuestro servidor desde una red externa lo haremos a traves del puerto 80 (para http) o el 443 (para https), lo que vamos a cambiar para acceder a una aplicación u otra es el dominio de acceso.
 
@@ -129,7 +142,7 @@ Antes de instalarlo debemos cambiar el puerto de acceso a la interfaz de CasaOS,
 
 Ahora cuando queramos acceder a la interfaz de CasaOS tendremos que poner lo siguiente en el navegador:
     
-> IP_SERVIDOR:PUERTO_ELEJIDO 
+> IP_SERVIDOR:PUERTO_ELEGIDO 
 
 Siguiendo con el ejemplo:
 
